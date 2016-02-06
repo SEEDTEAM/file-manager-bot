@@ -43,7 +43,6 @@ if [ "$1" = "install" ]; then
   install_luarocks
   install_rocks
 else
-  LOG_started
   while true; do
     lua bot.lua
     sleep 5s
