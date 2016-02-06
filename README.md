@@ -78,6 +78,13 @@ You should have [lua](http://www.lua.org/) installed
 sudo apt-get install lua
 
 ```
+Clone the bot
+
+```
+git clone https://github.com/Imandaneshi/file-manager-bot.git
+cd file-manager-bot
+
+```
 
 Then install bot using
 
