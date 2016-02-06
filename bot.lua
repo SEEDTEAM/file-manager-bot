@@ -1,8 +1,8 @@
 package.path = package.path .. ';.luarocks/share/lua/5.2/?.lua'
   ..';.luarocks/share/lua/5.2/?/init.lua'
 package.cpath = package.cpath .. ';.luarocks/lib/lua/5.2/?.so'
-URL = require "socket.url"
-JSON = (loadfile "dkjson.lua")()
+URL = require('socket.url')
+JSON = require('dkjson')
 HTTPS = require('ssl.https')
 ----config----
 local bot_api_key = ""
@@ -190,7 +190,7 @@ function msg_processor(msg)
 		end
 		if msg.text:match("^/shell (.*)$") then
 			local matches = { string.match(msg.text, "^/shell (.*)$") }
-			local text = io.popen('cd "'..BASE_FOLDER..currect_folder..'" && '..matches[1]):read('*all')
+			local text = io.popen('cd "'..BASE_FOLDER..currect_folder..'" && '..matches[1]:gsub('—', '--')):read('*all')
 			sendMessage(msg.chat.id, text)
 		end
 		if msg.text:match("^/cp (.*) (.*)$") then
