@@ -102,6 +102,15 @@ local BASE_URL = "https://api.telegram.org/bot"..bot_api_key
 local BASE_FOLDER = ""
 
 ```
+
+And enter your telegram-id in admins table in [bot.lua](https://github.com/Imandaneshi/file-manager-bot/blob/master/bot.lua#L19)
+```lua
+local var = false
+  local admins = {123456789,987654321}-- put your id here
+  for k,v in pairs(admins) do
+
+```
+
 Save bot.lua
 
 Start the bot
