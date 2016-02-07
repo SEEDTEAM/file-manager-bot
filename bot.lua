@@ -205,8 +205,12 @@ function msg_processor(msg)
 		end
 		if msg.text:match("^/upload (.*)$") then
 			local matches = { string.match(msg.text, "^/upload (.*)$") }
-			sendMessage(msg.chat.id, "Uploading file "..matches[1])
-			sendDocument(msg.chat.id, matches[1])
+			if io.popen('find '..BASE_FOLDER..currect_folder..matches[1]):read("*all") == '' then
+				sendMessage(msg.chat.id, "File does not exist")
+			else
+				sendMessage(msg.chat.id, "Uploading file "..matches[1])
+				sendDocument(msg.chat.id, matches[1])
+			end
 		end
 		if msg.text:match("^/download (.*)$") or msg.text:match("^/download$") then--Turn your bot privacy off or it won't  work on chats(groups and supergroups)
 			if not msg.reply_to_message then
