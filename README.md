@@ -6,29 +6,43 @@ A linux file manager telegram bot
 
  **cd [folder]**
 
+_Open folder_
+
 `/cd /test/test`
 
  **ls**
+
+_List folders_
 
 `/ls`
 
   **mkdir [folder name]**
 
+_Create a folder with name chosen_
+
 `/mkdir new folder`
 
  **rmdir [folder name]**
+
+_Remove the folder chosen_
 
 `/rmdir new folder`
 
  **rm [file name]**
 
+_Remove file_
+
 `/rm test.mp3`
 
  **touch [file name]**
 
+_Create a file with name chosen_
+
 `/touch test.txt`
 
  **cat [file name]**
+
+_Print the content_
 
 `/cat test.txt`
 
@@ -39,22 +53,28 @@ _Will create a file with name [file name] and will put [text] in it_
 `/tofile test.py print "Hello world !"`
 
  **shell [command]**
+ 
+ _Allow use the [command] on terminal_
 
 `/shell uptime`
 
  **cp [file] [dir]**
 
+_Copie [file] to folder [dir]_
+
 `/cp test.png test/test`
 
  **mv [file] [dir]**
+
+_Move [file] to folder [dir]_
 
 `/mv test.png test/test`
 
  **upload [file name]**
 
-`/upload test.txt`
+_Will upload that file in current folder_
 
-`Will upload that file in current folder`
+`/upload test.txt`
 
  **download <file name>**
 
@@ -81,7 +101,7 @@ sudo apt-get install lua5.1
 Clone the bot
 
 ```
-git clone https://github.com/Imandaneshi/file-manager-bot.git
+git clone https://github.com/SEEDTEAM/file-manager-bot.git
 cd file-manager-bot
 
 ```
@@ -103,7 +123,7 @@ local BASE_FOLDER = ""
 
 ```
 
-And enter your telegram-id in admins table in [bot.lua](https://github.com/Imandaneshi/file-manager-bot/blob/master/bot.lua#L19)
+And enter your telegram-id in admins table in [bot.lua](https://github.com/SEEDTEAM/file-manager-bot/blob/master/bot.lua#L19)
 ```lua
 local var = false
   local admins = {123456789,987654321}-- put your id here
