@@ -75,7 +75,7 @@ _Bot can upload files up to 50 mg and download files up to 20 mg_
 You should have [lua](http://www.lua.org/) installed
 
 ```bash
-sudo apt-get install lua
+sudo apt-get install lua5.1
 
 ```
 Clone the bot
