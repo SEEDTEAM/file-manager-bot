@@ -141,6 +141,7 @@ function bot_run()
 end
 
 function msg_processor(msg)
+	if msg == nil then return end
 	if not is_admin(msg) then return end-- Admins only !
 	if msg.date < os.time() - 5 then -- Ignore old msgs
 		return
